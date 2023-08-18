@@ -1,5 +1,6 @@
 // Основной файл.
 // Запускает игру.
+const player = require('play-sound')(opts = {});
 const Game = require('./src/Game');
 const runInteractiveConsole = require('./src/keyboard');
 
@@ -9,6 +10,7 @@ const game = new Game({
 });
 
 // Запуск игры.
+player.play('./src/sounds/twirl.wav');
 game.play();
 
 runInteractiveConsole(game);
